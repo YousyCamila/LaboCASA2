@@ -23,8 +23,8 @@
                         <i class="bi bi-pencil-square"></i> Edit
                     </a>
 
-                    <form asp-action="Delete" asp-route-id="@role.Id" method="post" class="d-inline">
-                        <button type="submit" class="btn btn-danger btn-sm">
+                    <form id="delete-form-@role.Id" asp-action="Delete" asp-route-id="@role.Id" method="post" class="d-inline">
+                        <button type="button" class="btn btn-danger btn-sm" onclick="confirmDelete('@role.Id')">
                             <i class="bi bi-trash-fill"></i> Delete
                         </button>
                     </form>
@@ -34,13 +34,41 @@
     </tbody>
 </table>
 
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    function confirmDelete(roleId) {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your role has been deleted.",
+                    icon: "success"
+                }).then(() => {
+                  
+                    document.getElementById(`delete-form-${roleId}`).submit();
+                });
+            }
+        });
+    }
+</script>
+
 <style>
-    /* Fondo de la página */
+
     body {
         background-color: #ede7f6;
     }
 
-    /* Estilos de los botones */
+
     .btn-primary {
         background-color: #7e57c2;
         border-color: #7e57c2;
@@ -65,7 +93,6 @@
             opacity: 0.8;
         }
 
-    /* Tabla */
     .thead-light {
         background-color: #d1c4e9;
     }
@@ -82,4 +109,5 @@
         border-radius: 0.25rem !important;
     }
 </style>
+
 
