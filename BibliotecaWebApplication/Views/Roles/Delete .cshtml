@@ -1,0 +1,67 @@
+﻿@model BibliotecaWebApplication.Models.ViewModels.RoleViewModel
+
+<h2>Delete Role</h2>
+<div class="alert alert-danger" role="alert">
+    <h4 class="alert-heading">Confirm Deletion</h4>
+    <p>Are you sure you want to delete the role '@Model.Name'? This action cannot be undone.</p>
+    <hr>
+    <!-- Button to trigger SweetAlert -->
+    <button id="deleteButton" type="button" class="btn btn-danger">
+        <i class="bi bi-trash-fill"></i> Delete Role
+    </button>
+    <a asp-action="Index" class="btn btn-secondary">
+        <i class="bi bi-x-circle"></i> Cancel
+    </a>
+</div>
+
+<!-- SweetAlert and Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: 'btn btn-success',
+                cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+        });
+
+        document.getElementById('deleteButton').addEventListener('click', function (event) {
+            event.preventDefault(); 
+
+            swalWithBootstrapButtons.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'No, cancel!',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Create and submit the form if confirmed
+                    const form = document.createElement('form');
+                    form.method = 'post';
+                    form.action = '@Url.Action("Delete", "YourController")'; // Adjust the controller name and action as needed
+
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = 'Id';
+                    input.value = '@Model.Id';
+                    form.appendChild(input);
+
+                    document.body.appendChild(form);
+                    form.submit();
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    swalWithBootstrapButtons.fire({
+                        title: 'Cancelled',
+                        text: 'The role is safe :)',
+                        icon: 'error'
+                    });
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,76 @@
+﻿@model BibliotecaWebApplication.Models.ViewModels.RoleViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Role</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f3f4f6; 
+        }
+
+        .container {
+            background-color: #6f42c1; 
+            color: #fff; 
+            padding: 2rem;
+            border-radius: 0.5rem;
+        }
+
+        .form-label {
+            color: #fff; 
+        }
+
+        .form-control {
+            background-color: #fff; 
+            color: #333; 
+        }
+
+        .btn-custom {
+            background-color: #6f42c1; 
+            color: #fff;
+            border: none;
+        }
+
+            .btn-custom:hover {
+                background-color: #5a2d91; 
+            }
+
+        .btn-secondary {
+            background-color: #fff; 
+            color: #6f42c1; 
+            border: 1px solid #6f42c1; 
+        }
+
+            .btn-secondary:hover {
+                background-color: #f3f4f6; 
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Edit Role</h2>
+
+        <form asp-action="Edit" asp-controller="Roles" method="post">
+            <input type="hidden" asp-for="Id" />
+
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">Role Name</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-custom">
+                <i class="bi bi-save"></i> Save Changes
+            </button>
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Back
+            </a>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
