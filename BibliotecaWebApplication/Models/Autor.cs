@@ -10,6 +10,9 @@ namespace BibliotecaWebApplication.Models
         public string Nombre { get; set; }
         public string Nacionalidad { get; set; }
 
+        public string FotoPath {  get; set; }
+         
+
 
         public Autor ()
         {

@@ -14,6 +14,8 @@ namespace BibliotecaWebApplication.Controllers
     {
         private readonly ApplicationDbContext _context;
 
+
+
         public AutoresController(ApplicationDbContext context)
         {
             _context = context;
@@ -56,11 +58,31 @@ namespace BibliotecaWebApplication.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AutorId,Apellidos,Nombre,Nacionalidad")] Autor autor)
+        public async Task<IActionResult> Create(Autor autor, IFormFile FotoPath)
         {
             if (ModelState.IsValid)
             {
-                autor.AutorId = Guid.NewGuid();
+                if (FotoPath != null && FotoPath.Length > 0)
+                {
+                    // Generar un nombre único para el archivo
+                    var fileName = Path.GetFileNameWithoutExtension(FotoPath.FileName);
+                    var extension = Path.GetExtension(FotoPath.FileName);
+                    var newFileName = $"{fileName}_{DateTime.Now.ToString("yyyyMMddHHmmss")}{extension}";
+
+                    // Definir la ruta donde se guardará el archivo
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\images\autores", newFileName);
+
+                    // Guardar el archivo
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await FotoPath.CopyToAsync(fileStream);
+                    }
+
+                    // Guardar la ruta de la imagen en la base de datos
+                    autor.FotoPath = "/images/autores/" + newFileName;
+                }
+
+                // Guardar el autor en la base de datos
                 _context.Add(autor);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
