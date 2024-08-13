@@ -4,28 +4,70 @@
     ViewData["Title"] = "Details";
 }
 
+<style>
+    body {
+        background-color: #f8f1f7;
+        color: #333333;
+        font-family: Arial, sans-serif;
+    }
+
+    h1, h4 {
+        color: #6a1b9a;
+    }
+
+    hr {
+        border-top: 2px solid #ba68c8;
+    }
+
+    .row dt {
+        color: #6a1b9a;
+        font-weight: bold;
+    }
+
+    .row dd {
+        color: #333333;
+        background-color: #ffffff;
+        border: 1px solid #d1c4e9;
+        border-radius: 4px;
+        padding: 5px;
+    }
+
+    a {
+        color: #6a1b9a;
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+        a:hover {
+            background-color: #ba68c8;
+            color: #ffffff;
+        }
+</style>
+
 <h1>Details</h1>
 
 <div>
     <h4>Autor</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Apellidos)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Apellidos)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Nombre)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Nombre)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Nacionalidad)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Nacionalidad)
         </dd>
     </dl>

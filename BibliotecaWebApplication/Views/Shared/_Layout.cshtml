@@ -8,10 +8,12 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-  
 
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BibliotecaWebApplication.styles.css" asp-append-version="true" />
+
+
+    <script src="https://cdn.datatables.net/2.1.3/js/dataTables.min.js"></script>
 </head>
 <body>
     <header>
@@ -37,6 +39,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="Index">Roles</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="UserRoles" asp-action="Index">Usuario-Roles</a>
+                        </li>
 
                     </ul>
                     <partial name="_LoginPartial" />
@@ -57,6 +62,9 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.datatables.net/2.1.3/js/dataTables.min.js"></script>
+
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

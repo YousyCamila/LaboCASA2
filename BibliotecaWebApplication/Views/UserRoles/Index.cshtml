@@ -1,0 +1,25 @@
+﻿@model IEnumerable<BibliotecaWebApplication.Models.ViewModels.UserRolesViewModel>
+<h2>Manage User Roles</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Roles</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Email</td>
+                <td>@string.Join(", ", user.Roles)</td>
+                <td>
+                    <a asp-action="Manage" asp-route-userId="@user.UserId" class="btn btn-info">Manage Roles</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
