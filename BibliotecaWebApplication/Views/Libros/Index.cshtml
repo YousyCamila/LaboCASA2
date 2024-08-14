@@ -1,0 +1,145 @@
+﻿@model IEnumerable<BibliotecaWebApplication.Models.Libro>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Libros</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-create mb-3">
+        <i class="bi bi-plus-circle"></i> Create New
+    </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ISBN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroPaginas)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ISBN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumeroPaginas)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.LibroId" class="btn btn-primary btn-sm">
+                        <i class="bi bi-pencil-square"></i> Edit
+                    </a>
+                    <a asp-action="Details" asp-route-id="@item.LibroId" class="btn btn-primary btn-sm">
+                        <i class="bi bi-info-circle"></i> Details
+                    </a>
+                    <form id="delete-form-@item.LibroId" asp-action="Delete" asp-route-id="@item.LibroId" method="post" class="d-inline">
+                        <button type="button" class="btn btn-danger btn-sm" onclick="confirmDelete('@item.LibroId')">
+                            <i class="bi bi-trash-fill"></i> Delete
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function confirmDelete(libroId) {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your item has been deleted.",
+                    icon: "success"
+                }).then(() => {
+                    document.getElementById(`delete-form-${libroId}`).submit();
+                });
+            }
+        });
+    }
+</script>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#librosTable').DataTable({
+                "language": {
+                    "lengthMenu": "Mostrar _MENU_ entradas por página",
+                    "zeroRecords": "No se encontraron resultados",
+                    "info": "Mostrando _START_ a _END_ de _TOTAL_ entradas",
+                    "infoEmpty": "Mostrando 0 a 0 de 0 entradas",
+                    "infoFiltered": "(filtrado de _MAX_ entradas totales)",
+                    "search": "Buscar:",
+                    "paginate": {
+                        "first": "Primero",
+                        "last": "Último",
+                        "next": "Siguiente",
+                        "previous": "Anterior"
+                    }
+                }
+            });
+        });
+    </script>
+}
+
+<style>
+    body {
+        background-color: #ede7f6; /* Color de fondo morado claro */
+    }
+
+    h1 {
+        color: #5c2f77; /* Color morado oscuro */
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .btn-primary {
+        background-color: #7e57c2; /* Color morado */
+        border-color: #7e57c2;
+        color: #ffffff;
+    }
+
+        .btn-primary:hover {
+            background-color: #6c3e8e; /* Color morado claro */
+            border-color: #6c3e8e;
+            opacity: 0.8;
+        }
+
+    .btn-create {
+        background-color: #9575cd; /* Color morado claro */
+        border-color: #9575cd;
+        color: #ffffff;
+    }
+
+        .btn-create:hover {
+            background-color: #8461c6; /* Color morado más oscuro */
+            border-color: #8461c6;
+            opacity: 0.8;
+        }
+
+    .btn-danger {
+        background-color: #f48fb1; /* Color rosa claro */
+        border-color: #f48fb1

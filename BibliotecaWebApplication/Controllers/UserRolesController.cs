@@ -2,10 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using BibliotecaWebApplication.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace BibliotecaWebApplication.Controllers
 {
+    [Authorize(Roles = "Root, Administrador")]
     public class UserRolesController : Controller
     {
         private readonly UserManager<IdentityUser> _userManager;

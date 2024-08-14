@@ -1,0 +1,104 @@
+﻿@model BibliotecaWebApplication.Models.Libro
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<style>
+    body {
+        background-color: #f8f1f7;
+        color: #333333;
+        font-family: Arial, sans-serif;
+    }
+
+    h1, h4 {
+        color: #6a1b9a;
+    }
+
+    hr {
+        border-top: 2px solid #ba68c8;
+    }
+
+    .form-control {
+        border: 1px solid #d1c4e9;
+        border-radius: 4px;
+        background-color: #ffffff;
+        color: #333333;
+    }
+
+        .form-control:focus {
+            border-color: #ba68c8;
+            box-shadow: none;
+        }
+
+    .btn-custom {
+        background-color: #ce93d8;
+        border: none;
+        color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-custom:hover {
+            background-color: #ab47bc;
+            color: #ffffff;
+        }
+
+    a {
+        color: #6a1b9a;
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+        a:hover {
+            background-color: #ba68c8;
+            color: #ffffff;
+        }
+
+    .text-danger {
+        color: #e57373;
+    }
+</style>
+
+<h1>Create</h1>
+
+<h4>Libro</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ISBN" class="control-label"></label>
+                <input asp-for="ISBN" class="form-control" />
+                <span asp-validation-for="ISBN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeroPaginas" class="control-label"></label>
+                <input asp-for="NumeroPaginas" class="form-control" type="number" />
+                <span asp-validation-for="NumeroPaginas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-custom" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

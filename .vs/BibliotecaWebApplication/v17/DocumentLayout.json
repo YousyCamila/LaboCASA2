@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|c:\\users\\aprendiz\\documents\\laboratorio 2-1\\labocasa2\\bibliotecawebapplication\\models\\seeds\\identitydatainitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|solutionrelative:bibliotecawebapplication\\models\\seeds\\identitydatainitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|c:\\users\\aprendiz\\documents\\laboratorio 2-1\\labocasa2\\bibliotecawebapplication\\views\\libros\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|solutionrelative:bibliotecawebapplication\\views\\libros\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|c:\\users\\aprendiz\\documents\\laboratorio 2-1\\labocasa2\\bibliotecawebapplication\\views\\autores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|solutionrelative:bibliotecawebapplication\\views\\autores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|c:\\users\\aprendiz\\documents\\laboratorio 2-1\\labocasa2\\bibliotecawebapplication\\controllers\\librocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|solutionrelative:bibliotecawebapplication\\controllers\\librocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|c:\\users\\aprendiz\\documents\\laboratorio 2-1\\labocasa2\\bibliotecawebapplication\\controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|solutionrelative:bibliotecawebapplication\\controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|c:\\users\\aprendiz\\documents\\laboratorio 2-1\\labocasa2\\bibliotecawebapplication\\views\\libros\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|solutionrelative:bibliotecawebapplication\\views\\libros\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|c:\\users\\aprendiz\\documents\\laboratorio 2-1\\labocasa2\\bibliotecawebapplication\\views\\autores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|solutionrelative:bibliotecawebapplication\\views\\autores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|c:\\users\\aprendiz\\documents\\laboratorio 2-1\\labocasa2\\bibliotecawebapplication\\views\\libros\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|solutionrelative:bibliotecawebapplication\\views\\libros\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|c:\\users\\aprendiz\\documents\\laboratorio 2-1\\labocasa2\\bibliotecawebapplication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|solutionrelative:bibliotecawebapplication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|c:\\users\\aprendiz\\documents\\laboratorio 2-1\\labocasa2\\bibliotecawebapplication\\views\\libros\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|solutionrelative:bibliotecawebapplication\\views\\libros\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|c:\\users\\aprendiz\\documents\\laboratorio 2-1\\labocasa2\\bibliotecawebapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|solutionrelative:bibliotecawebapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|c:\\users\\aprendiz\\documents\\laboratorio 2-1\\labocasa2\\bibliotecawebapplication\\views\\libros\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9EBED546-1C9B-43FA-A72D-22BEE7F50EEB}|BibliotecaWebApplication\\BibliotecaWebApplication.csproj|solutionrelative:bibliotecawebapplication\\views\\libros\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,76 +43,80 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IdentityDataInitializer.cs",
-              "DocumentMoniker": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Models\\Seeds\\IdentityDataInitializer.cs",
-              "RelativeDocumentMoniker": "BibliotecaWebApplication\\Models\\Seeds\\IdentityDataInitializer.cs",
-              "ToolTip": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Models\\Seeds\\IdentityDataInitializer.cs",
-              "RelativeToolTip": "BibliotecaWebApplication\\Models\\Seeds\\IdentityDataInitializer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T19:24:15.853Z",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Views\\Libros\\Details.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaWebApplication\\Views\\Libros\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Views\\Libros\\Details.cshtml",
+              "RelativeToolTip": "BibliotecaWebApplication\\Views\\Libros\\Details.cshtml",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAzwFkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-14T22:35:59.817Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AutoresController.cs",
-              "DocumentMoniker": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Controllers\\AutoresController.cs",
-              "RelativeDocumentMoniker": "BibliotecaWebApplication\\Controllers\\AutoresController.cs",
-              "ToolTip": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Controllers\\AutoresController.cs",
-              "RelativeToolTip": "BibliotecaWebApplication\\Controllers\\AutoresController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABcAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T19:19:09.827Z"
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Views\\Libros\\Delete.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaWebApplication\\Views\\Libros\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Views\\Libros\\Delete.cshtml",
+              "RelativeToolTip": "BibliotecaWebApplication\\Views\\Libros\\Delete.cshtml",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAzwGIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-14T22:34:38.06Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Views\\Autores\\Index.cshtml",
-              "RelativeDocumentMoniker": "BibliotecaWebApplication\\Views\\Autores\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Views\\Autores\\Index.cshtml",
-              "RelativeToolTip": "BibliotecaWebApplication\\Views\\Autores\\Index.cshtml",
-              "ViewState": "AQIAAJIAAAAAAAAAAAAAAKkAAABDAAAA",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Views\\Libros\\Edit.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaWebApplication\\Views\\Libros\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Views\\Libros\\Edit.cshtml",
+              "RelativeToolTip": "BibliotecaWebApplication\\Views\\Libros\\Edit.cshtml",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAzwGEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T19:14:05.986Z",
+              "WhenOpened": "2024-08-14T22:33:16.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Views\\Libros\\Create.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaWebApplication\\Views\\Libros\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Views\\Libros\\Create.cshtml",
+              "RelativeToolTip": "BibliotecaWebApplication\\Views\\Libros\\Create.cshtml",
+              "ViewState": "AQIAAEwAAAAAAAAAAAA2wGgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-14T22:25:03.585Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Program.cs",
-              "RelativeDocumentMoniker": "BibliotecaWebApplication\\Program.cs",
-              "ToolTip": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Program.cs",
-              "RelativeToolTip": "BibliotecaWebApplication\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T03:42:38.777Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Views\\Autores\\Create.cshtml",
-              "RelativeDocumentMoniker": "BibliotecaWebApplication\\Views\\Autores\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Views\\Autores\\Create.cshtml",
-              "RelativeToolTip": "BibliotecaWebApplication\\Views\\Autores\\Create.cshtml",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAABcAAAAbAAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Views\\Libros\\Index.cshtml",
+              "RelativeDocumentMoniker": "BibliotecaWebApplication\\Views\\Libros\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Views\\Libros\\Index.cshtml",
+              "RelativeToolTip": "BibliotecaWebApplication\\Views\\Libros\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-14T03:36:28.062Z"
+              "WhenOpened": "2024-08-14T22:22:55.447Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\appsettings.json",
-              "RelativeDocumentMoniker": "BibliotecaWebApplication\\appsettings.json",
-              "ToolTip": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\appsettings.json",
-              "RelativeToolTip": "BibliotecaWebApplication\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-14T03:12:51.323Z"
+              "DocumentIndex": 1,
+              "Title": "LibroController.cs",
+              "DocumentMoniker": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Controllers\\LibroController.cs",
+              "RelativeDocumentMoniker": "BibliotecaWebApplication\\Controllers\\LibroController.cs",
+              "ToolTip": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\Controllers\\LibroController.cs",
+              "RelativeToolTip": "BibliotecaWebApplication\\Controllers\\LibroController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAA/wCAAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T22:21:11.002Z",
+              "EditorCaption": ""
             }
           ]
         }

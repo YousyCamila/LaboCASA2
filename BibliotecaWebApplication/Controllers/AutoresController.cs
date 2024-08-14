@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BibliotecaWebApplication.Data;
 using BibliotecaWebApplication.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BibliotecaWebApplication.Controllers
 {
@@ -21,8 +22,9 @@ namespace BibliotecaWebApplication.Controllers
             _context = context;
         }
 
-       
+
         // GET: Autores
+        [Authorize(Roles ="Bibliotecario, Administrador")]
         public async Task<IActionResult> Index()
         {
               return _context.Autores != null ? 
@@ -31,6 +33,7 @@ namespace BibliotecaWebApplication.Controllers
         }
 
         // GET: Autores/Details/5
+        [Authorize(Roles = "Bibliotecario, Administrador")]
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null || _context.Autores == null)
@@ -49,6 +52,7 @@ namespace BibliotecaWebApplication.Controllers
         }
 
         // GET: Autores/Create
+        [Authorize(Roles = " Administrador, Bibliotecario")]
         public IActionResult Create()
         {
             return View();
@@ -58,6 +62,7 @@ namespace BibliotecaWebApplication.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = " Administrador")]
         public async Task<IActionResult> Create(Autor autor)
         {
             if (ModelState.IsValid)
@@ -109,6 +114,7 @@ namespace BibliotecaWebApplication.Controllers
         }
 
         // GET: Autores/Edit/5
+        [Authorize(Roles = "Bibliotecario, Administrador")]
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null || _context.Autores == null)
@@ -160,6 +166,7 @@ namespace BibliotecaWebApplication.Controllers
         }
 
         // GET: Autores/Delete/5
+        [Authorize(Roles = " Administrador")]
         public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null || _context.Autores == null)
@@ -180,6 +187,7 @@ namespace BibliotecaWebApplication.Controllers
         // POST: Autores/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = " Administrador")]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
             if (_context.Autores == null)
