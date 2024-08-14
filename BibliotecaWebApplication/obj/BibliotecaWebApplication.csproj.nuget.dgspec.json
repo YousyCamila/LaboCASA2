@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Documents\\Trabajos de git 4 TRIM\\LaboraCASA2\\LaboCASA2\\BibliotecaWebApplication\\BibliotecaWebApplication.csproj": {}
+    "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\BibliotecaWebApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Documents\\Trabajos de git 4 TRIM\\LaboraCASA2\\LaboCASA2\\BibliotecaWebApplication\\BibliotecaWebApplication.csproj": {
+    "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\BibliotecaWebApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Documents\\Trabajos de git 4 TRIM\\LaboraCASA2\\LaboCASA2\\BibliotecaWebApplication\\BibliotecaWebApplication.csproj",
+        "projectUniqueName": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\BibliotecaWebApplication.csproj",
         "projectName": "BibliotecaWebApplication",
-        "projectPath": "C:\\Users\\ASUS\\Documents\\Trabajos de git 4 TRIM\\LaboraCASA2\\LaboCASA2\\BibliotecaWebApplication\\BibliotecaWebApplication.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Documents\\Trabajos de git 4 TRIM\\LaboraCASA2\\LaboCASA2\\BibliotecaWebApplication\\obj\\",
+        "projectPath": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\BibliotecaWebApplication.csproj",
+        "packagesPath": "C:\\Users\\Aprendiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Aprendiz\\Documents\\LABORATORIO 2-1\\LaboCASA2\\BibliotecaWebApplication\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Aprendiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

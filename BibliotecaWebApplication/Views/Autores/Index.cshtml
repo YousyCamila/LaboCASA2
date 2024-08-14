@@ -27,18 +27,19 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Apellidos)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nacionalidad)
-            </td>
-            <td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellidos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nacionalidad)
+                </td>
+                <td>
                     <a asp-action="Edit" asp-route-id="@item.AutorId" class="btn btn-primary btn-sm">
                         <i class="bi bi-pencil-square"></i> Edit
                     </a>
@@ -75,7 +76,7 @@
                     text: "Your item has been deleted.",
                     icon: "success"
                 }).then(() => {
-                    document.getElementById(`delete-form-${authorId}`).submit();
+                    document.getElementById(delete -form - ${ authorId }).submit();
                 });
             }
         });
