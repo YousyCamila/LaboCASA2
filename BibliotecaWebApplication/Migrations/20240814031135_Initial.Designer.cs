@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BibliotecaWebApplication.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240813022243_Initial")]
+    [Migration("20240814031135_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -32,6 +32,10 @@ namespace BibliotecaWebApplication.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Apellidos")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FotoPath")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

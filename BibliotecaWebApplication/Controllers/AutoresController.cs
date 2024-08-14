@@ -55,31 +55,46 @@ namespace BibliotecaWebApplication.Controllers
 
         // POST: Autores/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Autor autor, IFormFile FotoPath)
+        public async Task<IActionResult> Create(Autor autor)
         {
             if (ModelState.IsValid)
             {
-                if (FotoPath != null && FotoPath.Length > 0)
+                if (autor.Foto != null && autor.Foto.Length > 0)
                 {
-                    // Generar un nombre único para el archivo
-                    var fileName = Path.GetFileNameWithoutExtension(FotoPath.FileName);
-                    var extension = Path.GetExtension(FotoPath.FileName);
-                    var newFileName = $"{fileName}_{DateTime.Now.ToString("yyyyMMddHHmmss")}{extension}";
-
-                    // Definir la ruta donde se guardará el archivo
-                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\images\autores", newFileName);
-
-                    // Guardar el archivo
-                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    try
                     {
-                        await FotoPath.CopyToAsync(fileStream);
-                    }
+                        // Verificar permisos en la carpeta
+                        var directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/autores");
+                        if (!Directory.Exists(directoryPath))
+                        {
+                            Directory.CreateDirectory(directoryPath);
+                        }
 
-                    // Guardar la ruta de la imagen en la base de datos
-                    autor.FotoPath = "/images/autores/" + newFileName;
+                        // Generar un nombre único para el archivo
+                        var fileName = Path.GetFileNameWithoutExtension(autor.Foto.FileName);
+                        var extension = Path.GetExtension(autor.Foto.FileName);
+                        var newFileName = $"{fileName}_{DateTime.Now:yyyyMMddHHmmss}{extension}";
+
+                        // Definir la ruta donde se guardará el archivo
+                        var filePath = Path.Combine(directoryPath, newFileName);
+
+                        // Guardar el archivo
+                        using (var fileStream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await autor.Foto.CopyToAsync(fileStream);
+                        }
+
+                        // Guardar la ruta de la imagen en la base de datos
+                        autor.FotoPath = "/images/autores/" + newFileName;
+                    }
+                    catch (Exception ex)
+                    {
+                        // Manejo de excepción 
+                        ModelState.AddModelError(string.Empty, "Ocurrió un error al guardar la imagen: " + ex.Message);
+                        return View(autor);
+                    }
                 }
 
                 // Guardar el autor en la base de datos
@@ -87,6 +102,8 @@ namespace BibliotecaWebApplication.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
+            // Si llegamos aquí, es que hubo un problema en la validación del modelo
             return View(autor);
         }
 

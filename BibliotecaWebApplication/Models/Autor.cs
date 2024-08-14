@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BibliotecaWebApplication.Models
 {
@@ -11,7 +12,9 @@ namespace BibliotecaWebApplication.Models
         public string Nacionalidad { get; set; }
 
         public string FotoPath {  get; set; }
-         
+
+        [NotMapped]
+        public IFormFile Foto { get; set; }
 
 
         public Autor ()
