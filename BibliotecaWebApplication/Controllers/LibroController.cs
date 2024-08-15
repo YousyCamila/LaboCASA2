@@ -18,16 +18,19 @@ namespace BibliotecaWebApplication.Controllers
         {
             _context = context;
         }
-
         // GET: Libros
         [Authorize(Roles = "Bibliotecario, Administrador")]
         public async Task<IActionResult> Index()
         {
-            return _context.Libros != null ?
-                          View(await _context.Libros.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Libros' is null.");
-        }
+            var libros = await _context.Libros
+                .Include(l => l.Autores)
+                .Where(l => l.Autores.Any()) // Filtrar solo los libros con autores
+                .ToListAsync();
 
+            return _context.Libros != null ?
+                       View(libros) :
+                       Problem("Entity set 'ApplicationDbContext.Libros' is null.");
+        }
         // GET: Libros/Details/5
         [Authorize(Roles = "Bibliotecario, Administrador")]
         public async Task<IActionResult> Details(Guid? id)

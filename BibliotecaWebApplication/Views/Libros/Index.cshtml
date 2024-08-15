@@ -8,21 +8,34 @@
 
 <p>
     <a asp-action="Create" class="btn btn-create mb-3">
-        <i class="bi bi-plus-circle"></i> Create New
+        <i class="bi bi-plus-circle"></i> Crear Nuevo
     </a>
 </p>
+
+@if (ViewData["CurrentSort"] != null)
+{
+    <span>Ordenado por: @ViewData["CurrentSort"]</span>
+}
+
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Buscar por título o autor: <input type="text" name="searchString" />
+            <input type="submit" value="Buscar" class="btn btn-primary" />
+        </p>
+    </div>
+</form>
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ISBN)
+                <a asp-action="Index" asp-route-sortOrder="@(ViewData["CurrentSort"] == "titulo_desc" ? "titulo_asc" : "titulo_desc")">
+                    Título
+                </a>
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Titulo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NumeroPaginas)
-            </th>
+            <th>Autores</th>
+            <th>Número de Páginas</th>
             <th></th>
         </tr>
     </thead>
@@ -31,24 +44,36 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ISBN)
+                    @Html.DisplayFor(modelItem => item.Titulo)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Titulo)
+                    @if (item.TieneAutores)
+                    {
+                        @foreach (var autor in item.Autores)
+                        {
+                            @autor.Nombre @autor.Apellidos
+
+                            <br />
+                        }
+                    }
+                    else
+                    {
+                        <p>Sin autores asignados.</p>
+                    }
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.NumeroPaginas)
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.LibroId" class="btn btn-primary btn-sm">
-                        <i class="bi bi-pencil-square"></i> Edit
+                        <i class="bi bi-pencil-square"></i> Editar
                     </a>
                     <a asp-action="Details" asp-route-id="@item.LibroId" class="btn btn-primary btn-sm">
-                        <i class="bi bi-info-circle"></i> Details
+                        <i class="bi bi-info-circle"></i> Detalles
                     </a>
                     <form id="delete-form-@item.LibroId" asp-action="Delete" asp-route-id="@item.LibroId" method="post" class="d-inline">
                         <button type="button" class="btn btn-danger btn-sm" onclick="confirmDelete('@item.LibroId')">
-                            <i class="bi bi-trash-fill"></i> Delete
+                            <i class="bi bi-trash-fill"></i> Eliminar
                         </button>
                     </form>
                 </td>
@@ -59,20 +84,21 @@
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
+
     function confirmDelete(libroId) {
         Swal.fire({
-            title: "Are you sure?",
-            text: "You won't be able to revert this!",
+            title: "¿Está seguro?",
+            text: "¡No podrá revertir esto!",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
+            confirmButtonText: "¡Sí, eliminar!"
         }).then((result) => {
             if (result.isConfirmed) {
                 Swal.fire({
-                    title: "Deleted!",
-                    text: "Your item has been deleted.",
+                    title: "¡Eliminado!",
+                    text: "Su libro ha sido eliminado.",
                     icon: "success"
                 }).then(() => {
                     document.getElementById(`delete-form-${libroId}`).submit();
@@ -104,6 +130,8 @@
         });
     </script>
 }
+
+
 
 <style>
     body {

@@ -10,6 +10,13 @@ namespace BibliotecaWebApplication.Models
         public string Titulo { get; set; }
         public int NumeroPaginas { get; set; }
 
+        //
+        public ICollection<Autor>? Autores { get; set; }
+
+        public bool TieneAutores => Autores?.Any() ?? false;
+
+        //
+
         public Libro ()
 
         {
