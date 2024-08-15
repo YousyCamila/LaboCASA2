@@ -1750,3 +1750,5 @@ C:\Users\ASUS\Documents\Trabajos de git 4 TRIM\LaboraCASA2\LaboCASA2\BibliotecaW
 C:\Users\ASUS\Documents\Trabajos de git 4 TRIM\LaboraCASA2\LaboCASA2\BibliotecaWebApplication\obj\Debug\net7.0\ref\BibliotecaWebApplication.dll
 C:\Users\Aprendiz\Documents\LABORATORIO 2-1\LaboCASA2\BibliotecaWebApplication\bin\Debug\net7.0\SendGrid.dll
 C:\Users\Aprendiz\Documents\LABORATORIO 2-1\LaboCASA2\BibliotecaWebApplication\bin\Debug\net7.0\StarkbankEcdsa.dll
+C:\Users\ASUS\Documents\Trabajos de git 4 TRIM\LaboraCASA2\LaboCASA2\BibliotecaWebApplication\bin\Debug\net7.0\SendGrid.dll
+C:\Users\ASUS\Documents\Trabajos de git 4 TRIM\LaboraCASA2\LaboCASA2\BibliotecaWebApplication\bin\Debug\net7.0\StarkbankEcdsa.dll
