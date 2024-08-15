@@ -1,0 +1,28 @@
+﻿@model BibliotecaWebApplication.Models.Autor
+
+<h2>Agregar Autor</h2>
+
+<form asp-action="AgregarAutor" method="post" enctype="multipart/form-data">
+    <div>
+        <label for="Nombre">Nombre:</label>
+        <input asp-for="Nombre" class="form-control" />
+    </div>
+    <div>
+        <label for="Apellidos">Apellidos:</label>
+        <input asp-for="Apellidos" class="form-control" />
+    </div>
+    <div>
+        <label for="Nacionalidad">Nacionalidad:</label>
+        <input asp-for="Nacionalidad" class="form-control" />
+    </div>
+    <div>
+        <label for="FotoPath">Foto:</label>
+        <input asp-for="FotoPath" type="file" class="form-control" />
+    </div>
+    <div>
+        <label for="LibrosSeleccionados">Libros:</label>
+        <select asp-for="LibrosSeleccionados" asp-items="ViewBag.Libros" class="form-control" multiple></select>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+

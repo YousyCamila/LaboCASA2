@@ -11,6 +11,15 @@
         <i class="bi bi-plus-circle"></i> Create New
     </a>
 </p>
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Buscar por nombre o apellido: <input type="text" name="searchString"   />
+            <input type="hidden" name="sortOrder" value="@ViewData["CurrentSort"]" />
+            <input type="submit" value="Buscar" class="btn btn-primary" />
+        </p>
+    </div>
+</form>
 <table class="table">
     <thead>
         <tr>

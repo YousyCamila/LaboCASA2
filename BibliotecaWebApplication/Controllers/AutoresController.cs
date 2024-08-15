@@ -24,12 +24,19 @@ namespace BibliotecaWebApplication.Controllers
 
 
         // GET: Autores
-        [Authorize(Roles ="Bibliotecario, Administrador")]
-        public async Task<IActionResult> Index()
+        [Authorize(Roles = "Bibliotecario, Administrador")]
+        public async Task<IActionResult> Index(string searchString)
         {
-              return _context.Autores != null ? 
-                          View(await _context.Autores.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Autores'  is null.");
+            var autores = await _context.Autores.ToListAsync();
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                autores = autores.Where(s => s.Nombre.Contains(searchString, StringComparison.OrdinalIgnoreCase)
+                                        || s.Apellidos.Contains(searchString, StringComparison.OrdinalIgnoreCase))
+                                .ToList();
+            }
+
+            return View(autores);
         }
 
         // GET: Autores/Details/5
@@ -199,14 +206,64 @@ namespace BibliotecaWebApplication.Controllers
             {
                 _context.Autores.Remove(autor);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool AutorExists(Guid id)
         {
-          return (_context.Autores?.Any(e => e.AutorId == id)).GetValueOrDefault();
+            return (_context.Autores?.Any(e => e.AutorId == id)).GetValueOrDefault();
+        }
+
+
+        //GET
+
+        [Authorize(Roles = "Bibliotecario, Administrador")]
+        public IActionResult AgregarAutor()
+        {
+            ViewData["Libros"] = new SelectList(_context.Libros, "LibroId", "Titulo");
+            return View();
+        }
+
+        //POST 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Bibliotecario, Administrador")]
+        public async Task<IActionResult> AgregarAutor(Autor model)
+        {
+            if (ModelState.IsValid)
+            {
+                var autor = new Autor
+                {
+                    AutorId = Guid.NewGuid(),
+                    Apellidos = model.Apellidos,
+                    Nombre = model.Nombre,
+                    Nacionalidad = model.Nacionalidad,
+                    FotoPath = model.FotoPath,
+                };
+
+                _context.Autores.Add(autor);
+                await _context.SaveChangesAsync();
+
+               
+                foreach (var libroId in model.LibrosSeleccionados)
+                {
+                    var autorLibro = new Autorlibro
+                    {
+                        AutorId = autor.AutorId,
+                        LibroId = new Guid(libroId.ToString())  
+                    };
+                    _context.Autorlibro.Add(autorLibro);
+                }
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+
+            ViewData["Libros"] = new SelectList(_context.Libros, "LibroId", "Titulo");
+            return View(model);
         }
     }
 }
+

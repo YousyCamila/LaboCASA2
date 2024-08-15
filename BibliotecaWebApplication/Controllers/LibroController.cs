@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BibliotecaWebApplication.Data;
 using BibliotecaWebApplication.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BibliotecaWebApplication.Controllers
 {
@@ -24,13 +25,12 @@ namespace BibliotecaWebApplication.Controllers
         {
             var libros = await _context.Libros
                 .Include(l => l.Autores)
-                .Where(l => l.Autores.Any()) // Filtrar solo los libros con autores
                 .ToListAsync();
 
-            return _context.Libros != null ?
-                       View(libros) :
-                       Problem("Entity set 'ApplicationDbContext.Libros' is null.");
+            return View(libros);
         }
+
+
         // GET: Libros/Details/5
         [Authorize(Roles = "Bibliotecario, Administrador")]
         public async Task<IActionResult> Details(Guid? id)
@@ -167,5 +167,7 @@ namespace BibliotecaWebApplication.Controllers
         {
             return (_context.Libros?.Any(e => e.LibroId == id)).GetValueOrDefault();
         }
+
     }
 }
+

@@ -14,6 +14,10 @@ namespace BibliotecaWebApplication.Models
         public string FotoPath {  get; set; }
 
         [NotMapped]
+        public List<int> LibrosSeleccionados { get; set; }
+
+
+        [NotMapped]
         public IFormFile Foto { get; set; }
 
 
